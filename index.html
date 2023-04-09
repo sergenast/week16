@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <h1>Калькулятор стоимости авто</h1>
+    <form name="form" novalidate>
+    <div class="brand">
+      <div>Марка авто</div>
+      <select class="select" name="selectBrand">
+        <option>Renault</option>
+        <option value="Opel">Opel</option>
+        <option>Mazda</option>
+        <option>Jaguar</option>
+      </select>
+    </div>
+    <div class="model">
+      <div>Модель</div>
+      <select class="select" name="selectModel">
+        <option>Model 1</option>
+        <option>Model 2</option>
+        <option>Model 3</option>
+      </select>
+    </div>
+    <div class="fuel">
+      <div>Вид топлива</div>
+      <div>
+        <div class="fuel__option">Бензин <input name="fuel" type="radio" id="petrol" /></div>
+        <div class="fuel__option">Дизель <input name="fuel" type="radio" id="disel"/></div>
+        <div class="fuel__option">Газ <input name="fuel" type="radio" id="gas" /></div>
+        <div class="fuel__option">Электричество <input name="fuel" type="radio" id="electro" /></div>
+      </div>
+    </div>
+    <div class="engine">
+      <div>Объем двигателя</div>
+      <input class="engine__input" type="number" min="1.1" max="3.5" required />
+    </div>
+    <div class="state">
+      <div>Состояние</div>
+      <div>
+        <div class="state__option">Новый <input name="state" type="radio" id="new" /></div>
+        <div class="state__option">Подержанный <input name="state" type="radio" id="notNew"/></div>
+      </div>
+    </div>
+    <div class="count">
+        <div>Количество </br> владельцев</div>
+      <div>
+        <div class="count__option">1-2 <input name="count" type="radio" id="oneTwo" /></div>
+        <div class="count__option">Более 3-х <input name="count" type="radio" id="three" /></div>
+      </div>
+    </div>
+    <div class="payment">
+        <div>Способ </br> оплаты</div>
+        <div>
+            <div class="payment__option">Картой <input name="payment" type="radio"> </div>
+            <div class="payment__option">Наличными <input name="payment" type="radio"> </div>
+            <div class="payment__option">Счет на юрлицо <input name="payment" type="radio"> </div>
+        </div>
+    </div>
+    <button id="mistakes">Проверить на ошибки</button>
+        <div class="errors"></div>
+    <div class="total">
+        <div> <button id="button">Посчитать</button></div>
+        <div id="sum"></div>
+    </div>
+
+    </form>
+    <script src="./index.js"></script>
+  </body>
+</html>
